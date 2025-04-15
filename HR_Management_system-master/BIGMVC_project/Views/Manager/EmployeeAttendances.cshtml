@@ -1,0 +1,30 @@
+﻿@model List<Attendance>
+
+@{
+	Layout = "~/Views/Shared/_ManagersLayout1.cshtml";
+    var employee = ViewBag.Employee as BIGMVC_project.Models.Employee;
+}
+
+<h2>Attendancs for @employee.Name</h2>
+<a asp-action="Show_Employee" asp-controller="Manager">Back_to_list</a>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Date</th>
+            <th>PunchInTime</th>
+            <th>PunchOutTime</th>
+            <th>PunchTime</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var Attendance in Model)
+        {
+            <tr>
+                <td>@Attendance.Date</td>
+                <td>@Attendance.PunchIn</td>
+                <td>@Attendance.PunchOut</td>
+                <td>@((Attendance.PunchOut - Attendance.PunchIn)?.ToString(@"hh\:mm"))</td>
+            </tr>
+        }
+    </tbody>
+</table>

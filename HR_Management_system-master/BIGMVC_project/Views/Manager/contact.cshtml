@@ -1,0 +1,715 @@
+﻿@{
+	Layout = null;
+}
+@model Feedback
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>SolveX HR</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/css/booticon.css" rel="stylesheet">
+    <link href="~/css/aos.css" rel="stylesheet">
+    <link href="~/css/swiper.css" rel="stylesheet">
+    <link href="~/css/glig.css" rel="stylesheet">
+
+    <!-- Main CSS File -->
+    <link href="~/css/main.css" rel="stylesheet">
+    <style>
+        #ss {
+            color: var(--contrast-color);
+            background: var(--accent-color);
+            border: 0;
+            padding: 10px 30px;
+            transition: 0.4s;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body class="index-page">
+
+    <header id="header" class="header d-flex align-items-center fixed-top">
+        <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+            <a href="index.html" class="logo d-flex align-items-center me-auto me-lg-0">
+                <!-- Uncomment the line below if you also wish to use an image logo -->
+                <!-- <img src="assets/img/logo.png" alt=""> -->
+                <h1 class="sitename"><img src="~/image/HRoot_Logo-removebg-preview.png" style="max-height:46px !important" alt="Alternate Text" /></h1>
+                <span>.</span>
+            </a>
+            <nav id="navmenu" class="navmenu">
+                <ul>
+                    <li><a href="#hero" class="active">Home<br></a></li>
+                    <li><a asp-controller="Manager" asp-action="About_us" >About</a></li>
+                    <li><a  href="#services">Services</a></li>
+                    <li><a asp-controller="Manager" asp-action="ContactUs">Contact</a></li>
+                </ul>
+                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            </nav>
+
+            <a asp-controller="Login" asp-action="Index" id="ss" class="cta-btn">Login</a>
+
+        </div>
+    </header>
+
+    <main class="main">
+
+        <!-- Hero Section -->
+        <section id="hero" class="hero section dark-background">
+
+            <img src="~/image/hero-bg.jpg" alt="" data-aos="fade-in">
+
+            <div class="container">
+
+                <div class="row justify-content-center text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="col-xl-6 col-lg-8">
+                        <h2>Streamlining Your Workforce Management with Our HR System<span>.</span></h2>
+                        <p>Efficient, Easy-to-Use Tools for Managing Employees, Tasks, and Operations.</p>
+                    </div>
+                </div>
+
+                <div class="row gy-4 mt-5 justify-content-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="col-xl-2 col-md-4" data-aos="fade-up" data-aos-delay="300">
+                        <div class="icon-box">
+                            <i class="bi bi-person"></i>
+                            <h3><a href="">Self-Service Portal</a></h3>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-md-4" data-aos="fade-up" data-aos-delay="400">
+                        <div class="icon-box">
+                            <i class="bi bi-fullscreen-exit"></i>
+                            <h3><a href="">Attendance Tracking</a></h3>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-md-4" data-aos="fade-up" data-aos-delay="500">
+                        <div class="icon-box">
+                            <i class="bi bi-wallet2"></i>
+                            <h3><a href="">Payroll Management</a></h3>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-md-4" data-aos="fade-up" data-aos-delay="600">
+                        <div class="icon-box">
+                            <i class="bi bi-bar-chart"></i>
+                            <h3><a href="">Task Management</a></h3>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-md-4" data-aos="fade-up" data-aos-delay="700">
+                        <div class="icon-box">
+                            <i class="bi bi-graph-up-arrow"></i>
+                            <h3><a href="">Performance Reviews</a></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section><!-- /Hero Section -->
+        <!-- About Section -->
+        <section id="about" class="about section">
+
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+                <div class="row gy-4">
+                    <div class="col-lg-6 order-1 order-lg-2">
+                        <img src="~/image/about.jpg" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-lg-6 order-2 order-lg-1 content">
+                        <h3>About Us</h3>
+                        <p class="fst-italic">
+                            Our HR Management System is designed to streamline employee management, enhance productivity, and simplify HR operations. We provide innovative solutions to help organizations manage their workforce efficiently and effectively.
+                        </p>
+                        <ul>
+                            <li><i class="bi bi-check2-all"></i> <span>Seamless Employee Management – Track attendance, assign tasks, and monitor performance with ease.</span></li>
+                            <li><i class="bi bi-check2-all"></i> <span>Automated HR Processes – Simplify leave requests, evaluations, and payroll management to save time and resources.</span></li>
+                            <li><i class="bi bi-check2-all"></i> <span>User-Friendly & Secure – Ensure a smooth experience with an intuitive interface and robust security measures.</span></li>
+                        </ul>
+                        <p>
+                            With our HR Management System, businesses can optimize their workforce operations, reduce administrative burdens, and improve decision-making. Our solution ensures a more efficient, transparent, and productive work environment for both employees and management.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section><!-- /About Section -->
+        <!-- Clients Section -->
+        <section id="clients" class="clients section">
+
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+                <div class="swiper init-swiper">
+                    <script type="application/json" class="swiper-config">
+                        {
+                          "loop": true,
+                          "speed": 600,
+                          "autoplay": {
+                            "delay": 5000
+                          },
+                          "slidesPerView": "auto",
+                          "pagination": {
+                            "el": ".swiper-pagination",
+                            "type": "bullets",
+                            "clickable": true
+                          },
+                          "breakpoints": {
+                            "320": {
+                              "slidesPerView": 2,
+                              "spaceBetween": 40
+                            },
+                            "480": {
+                              "slidesPerView": 3,
+                              "spaceBetween": 60
+                            },
+                            "640": {
+                              "slidesPerView": 4,
+                              "spaceBetween": 80
+                            },
+                            "992": {
+                              "slidesPerView": 6,
+                              "spaceBetween": 120
+                            }
+                          }
+                        }
+                    </script>
+                    <div class="swiper-wrapper align-items-center">
+                        <div class="swiper-slide"><img src="~/image/client-1.png" class="img-fluid" alt=""></div>
+                        <div class="swiper-slide"><img src="~/image/client-2.png" class="img-fluid" alt=""></div>
+                        <div class="swiper-slide"><img src="~/image/client-3.png" class="img-fluid" alt=""></div>
+                        <div class="swiper-slide"><img src="~/image/client-4.png" class="img-fluid" alt=""></div>
+                        <div class="swiper-slide"><img src="~/image/client-5.png" class="img-fluid" alt=""></div>
+                        <div class="swiper-slide"><img src="~/image/client-6.png" class="img-fluid" alt=""></div>
+                        <div class="swiper-slide"><img src="~/image/client-7.png" class="img-fluid" alt=""></div>
+                        <div class="swiper-slide"><img src="~/image/client-8.png" class="img-fluid" alt=""></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+
+            </div>
+
+        </section><!-- /Clients Section -->
+        <!-- Features Section -->
+        <section id="features" class="features section">
+
+            <div class="container">
+
+                <div class="row gy-4">
+                    <div class="features-image col-lg-6" data-aos="fade-up" data-aos-delay="100"><img src="~/image/features-bg.jpg" alt=""></div>
+                    <div class="col-lg-6">
+
+                        <div class="features-item d-flex ps-0 ps-lg-3 pt-4 pt-lg-0" data-aos="fade-up" data-aos-delay="200">
+                            <i class="bi bi-bar-chart"></i>
+                            <div>
+                                <h4>Enhanced Workforce Efficiency</h4>
+                                <p>Streamline HR processes to boost productivity and reduce manual workload.</p>
+                            </div>
+                        </div><!-- End Features Item-->
+
+                        <div class="features-item d-flex mt-5 ps-0 ps-lg-3" data-aos="fade-up" data-aos-delay="300">
+                            <i class="bi bi-graph-up"></i>
+                            <div>
+                                <h4>Data-Driven Insights </h4>
+                                <p>Gain valuable analytics for informed decision-making and strategic planning.</p>
+                            </div>
+                        </div><!-- End Features Item-->
+
+                        <div class="features-item d-flex mt-5 ps-0 ps-lg-3" data-aos="fade-up" data-aos-delay="400">
+                            <i class="bi bi-people"></i>
+                            <div>
+                                <h4>Secure & Scalable Solutions</h4>
+                                <p>Ensure data security and accommodate business growth with a reliable system.</p>
+                            </div>
+                        </div><!-- End Features Item-->
+
+                        <div class="features-item d-flex mt-5 ps-0 ps-lg-3" data-aos="fade-up" data-aos-delay="500">
+                            <i class="bi bi-shield-lock"></i>
+                            <div>
+                                <h4>Customizable & Flexible</h4>
+                                <p>Adapt the system to meet your organization's unique HR needs and policies.</p>
+                            </div>
+                        </div><!-- End Features Item-->
+
+                    </div>
+                </div>
+
+            </div>
+
+        </section><!-- /Features Section -->
+        <!-- Services Section -->
+        <section id="services" class="services section">
+
+            <!-- Section Title -->
+            <div class="container section-title" data-aos="fade-up">
+                <h2>Services</h2>
+                <p>Check our Services</p>
+            </div><!-- End Section Title -->
+
+            <div class="container">
+
+                <div class="row gy-4">
+
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="service-item position-relative">
+                            <div class="icon">
+                                <i class="bi bi-people"></i>
+                            </div>
+                            <a href="service-details.html" class="stretched-link">
+                                <h3>Employee Management</h3>
+                            </a>
+                            <p>Manage employee profiles, track attendance, and monitor work progress efficiently.</p>
+                        </div>
+                    </div><!-- End Service Item -->
+
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                        <div class="service-item position-relative">
+                            <div class="icon">
+                                <i class="bi bi-kanban"></i>
+                            </div>
+                            <a href="service-details.html" class="stretched-link">
+                                <h3>Task & Workflow Automation</h3>
+                            </a>
+                            <p>Assign, track, and manage tasks using a structured workflow with status tracking (To Do, Doing, Done).</p>
+                        </div>
+                    </div><!-- End Service Item -->
+
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                        <div class="service-item position-relative">
+                            <div class="icon">
+                                <i class="bi bi-calendar-check"></i>
+                            </div>
+                            <a href="service-details.html" class="stretched-link">
+                                <h3> Leave & Vacation Management </h3>
+                            </a>
+                            <p>Allow employees to request leave, managers to approve/reject requests, and HR to oversee all leave records.</p>
+                        </div>
+                    </div><!-- End Service Item -->
+
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                        <div class="service-item position-relative">
+                            <div class="icon">
+                                <i class="bi bi-clock-history"></i>
+                            </div>
+                            <a href="service-details.html" class="stretched-link">
+                                <h3>Attendance Tracking</h3>
+                            </a>
+                            <p>Employees can punch in and out, while managers and HR can monitor attendance records.</p>
+                            <a href="service-details.html" class="stretched-link"></a>
+                        </div>
+                    </div><!-- End Service Item -->
+
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+                        <div class="service-item position-relative">
+                            <div class="icon">
+                                <i class="bi bi-graph-up"></i>
+                            </div>
+                            <a href="service-details.html" class="stretched-link">
+                                <h3>Performance Evaluation</h3>
+                            </a>
+                            <p>Managers can assess employee performance with structured evaluation forms and feedback.</p>
+                            <a href="service-details.html" class="stretched-link"></a>
+                        </div>
+                    </div><!-- End Service Item -->
+
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+                        <div class="service-item position-relative">
+                            <div class="icon">
+                                <i class="bi bi-building"></i>
+                            </div>
+                            <a href="service-details.html" class="stretched-link">
+                                <h3>Department & Role Management</h3>
+                            </a>
+                            <p>HR can create departments, assign managers, and structure the company's hierarchy.</p>
+                            <a href="service-details.html" class="stretched-link"></a>
+                        </div>
+                    </div><!-- End Service Item -->
+
+                </div>
+
+            </div>
+
+        </section><!-- /Services Section -->
+        <!-- Call To Action Section -->
+        <section id="call-to-action" class="call-to-action section dark-background">
+
+            <img src="~/image/cta-bg.jpg" alt="">
+
+            <div class="container">
+                <div class="row justify-content-center" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="col-xl-10">
+                        <div class="text-center">
+                            <h3>Our Moto</h3>
+                            <p>This motto highlights both the efficiency and ease your HR Management System brings to businesses. Let me know if you want something different! </p>
+                            <a asp-controller="Manager" asp-action="About_us" class="cta-btn">More about us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section><!-- /Call To Action Section -->
+        <!-- Stats Section -->
+        <section id="stats" class="stats section">
+
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+                <div class="row gy-4 align-items-center justify-content-between">
+
+                    <div class="col-lg-5">
+                        <img src="~/image/stats-img.jpg" alt="" class="img-fluid">
+                    </div>
+
+                    <div class="col-lg-6">
+
+                        <h3 class="fw-bold fs-2 mb-3">Why Choose Us</h3>
+                        <p>
+                            "Streamlining HR, Enhancing Productivity, and Driving Success."
+
+                            This phrase emphasizes the core benefits of your system, making it clear why users should choose your solution. Let me know if you'd like it adjusted!
+                        </p>
+
+                        <div class="row gy-4">
+
+                            <div class="col-lg-6">
+                                <div class="stats-item d-flex">
+                                    <i class="bi bi-emoji-smile flex-shrink-0"></i>
+                                    <div>
+                                        <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
+                                        <p><strong>Happy Clients</strong> <span>Trusted. Efficient. Reliable.</span></p>
+                                    </div>
+                                </div>
+                            </div><!-- End Stats Item -->
+
+                            <div class="col-lg-6">
+                                <div class="stats-item d-flex">
+                                    <i class="bi bi-journal-richtext flex-shrink-0"></i>
+                                    <div>
+                                        <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
+                                        <p><strong>Projects</strong> <span>Successfully delivering projects on time, ensuring client satisfaction.</span></p>
+                                    </div>
+                                </div>
+                            </div><!-- End Stats Item -->
+
+                            <div class="col-lg-6">
+                                <div class="stats-item d-flex">
+                                    <i class="bi bi-headset flex-shrink-0"></i>
+                                    <div>
+                                        <span data-purecounter-start="0" data-purecounter-end="1453" data-purecounter-duration="1" class="purecounter"></span>
+                                        <p><strong>Hours Of Support</strong> <span>Providing continuous support to clients, ensuring smooth operations and troubleshooting.</span></p>
+                                    </div>
+                                </div>
+                            </div><!-- End Stats Item -->
+
+                            <div class="col-lg-6">
+                                <div class="stats-item d-flex">
+                                    <i class="bi bi-people flex-shrink-0"></i>
+                                    <div>
+                                        <span data-purecounter-start="0" data-purecounter-end="32" data-purecounter-duration="1" class="purecounter"></span>
+                                        <p><strong>Hard Workers</strong> <span>Our dedicated team of professionals ensures your HR processes run seamlessly.</span></p>
+                                    </div>
+                                </div>
+                            </div><!-- End Stats Item -->
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section><!-- /Stats Section -->
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="testimonials section dark-background">
+
+            <img src="~/image/testimonials-bg.jpg" class="testimonials-bg" alt="">
+
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+                <div class="swiper init-swiper">
+                    <script type="application/json" class="swiper-config">
+                        {
+                          "loop": true,
+                          "speed": 600,
+                          "autoplay": {
+                            "delay": 5000
+                          },
+                          "slidesPerView": "auto",
+                          "pagination": {
+                            "el": ".swiper-pagination",
+                            "type": "bullets",
+                            "clickable": true
+                          }
+                        }
+                    </script>
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">
+                            <div class="testimonial-item">
+                                <img src="~/image/testimonials-1.jpg" class="testimonial-img" alt="">
+                                <h3>Saul Goodman</h3>
+                                <h4>Ceo &amp; Founder</h4>
+                                <div class="stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                                </div>
+                                <p>
+                                    <i class="bi bi-quote quote-icon-left"></i>
+                                    <span>An essential tool that transformed how we manage our employees.</span>
+                                    <i class="bi bi-quote quote-icon-right"></i>
+                                </p>
+                            </div>
+                        </div><!-- End testimonial item -->
+
+                        <div class="swiper-slide">
+                            <div class="testimonial-item">
+                                <img src="~/image/testimonials-2.jpg" class="testimonial-img" alt="">
+                                <h3>Sara Wilsson</h3>
+                                <h4>Designer</h4>
+                                <div class="stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                                </div>
+                                <p>
+                                    <i class="bi bi-quote quote-icon-left"></i>
+                                    <span>Streamlined our operations, saving time and boosting productivity!</span>
+                                    <i class="bi bi-quote quote-icon-right"></i>
+                                </p>
+                            </div>
+                        </div><!-- End testimonial item -->
+
+                        <div class="swiper-slide">
+                            <div class="testimonial-item">
+                                <img src="~/image/testimonials-3.jpg" class="testimonial-img" alt="">
+                                <h3>Jena Karlis</h3>
+                                <h4>Store Owner</h4>
+                                <div class="stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                                </div>
+                                <p>
+                                    <i class="bi bi-quote quote-icon-left"></i>
+                                    <span>Empowering our team with a user-friendly and robust HR system..</span>
+                                    <i class="bi bi-quote quote-icon-right"></i>
+                                </p>
+                            </div>
+                        </div><!-- End testimonial item -->
+
+                        <div class="swiper-slide">
+                            <div class="testimonial-item">
+                                <img src="~/image/testimonials-4.jpg" class="testimonial-img" alt="">
+                                <h3>Matt Brandon</h3>
+                                <h4>Freelancer</h4>
+                                <div class="stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                                </div>
+                                <p>
+                                    <i class="bi bi-quote quote-icon-left"></i>
+                                    <span>"A game-changer for our workforce—simple, efficient, and reliable."</span>
+                                    <i class="bi bi-quote quote-icon-right"></i>
+                                </p>
+                            </div>
+                        </div><!-- End testimonial item -->
+
+                        <div class="swiper-slide">
+                            <div class="testimonial-item">
+                                <img src="~/image/testimonials-5.jpg" class="testimonial-img" alt="">
+                                <h3>John Larson</h3>
+                                <h4>Entrepreneur</h4>
+                                <div class="stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                                </div>
+                                <p>
+                                    <i class="bi bi-quote quote-icon-left"></i>
+                                    <span>Revolutionized our HR management with seamless functionality and ease!</span>
+                                    <i class="bi bi-quote quote-icon-right"></i>
+                                </p>
+                            </div>
+                        </div><!-- End testimonial item -->
+
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+
+            </div>
+
+        </section><!-- /Testimonials Section -->
+        <!-- Contact Section -->
+        <section id="contact" class="contact section">
+
+            <!-- Section Title -->
+            <div class="container section-title" data-aos="fade-up">
+                <h2>Contact</h2>
+                <p>Contact Us</p>
+            </div><!-- End Section Title -->
+
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+                <div class="mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3363.009729811047!2d35.847093874805246!3d32.55258557375828!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151c7715f2c2e7ab%3A0x51755840c8ddbefd!2sOrange%20Digital%20Village%20Irbid!5e0!3m2!1sen!2sjo!4v1740782086275!5m2!1sen!2sjo" style="border:0; width: 100%; height: 270px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div><!-- End Google Maps -->
+
+                <div class="row gy-4">
+
+                    <div class="col-lg-4">
+                        <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+                            <i class="bi bi-geo-alt flex-shrink-0"></i>
+                            <div>
+                                <h3>Address</h3>
+                                <p>Al-Sheikh Khalil St., Irbid</p>
+                            </div>
+                        </div><!-- End Info Item -->
+
+                        <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+                            <i class="bi bi-telephone flex-shrink-0"></i>
+                            <div>
+                                <h3>Call Us</h3>
+                                <p>+962 797 777 999</p>
+                            </div>
+                        </div><!-- End Info Item -->
+
+                        <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="500">
+                            <i class="bi bi-envelope flex-shrink-0"></i>
+                            <div>
+                                <h3>Email Us</h3>
+                                <p>hroot@info.com</p>
+                            </div>
+                        </div><!-- End Info Item -->
+
+                    </div>
+
+                    <div class="col-lg-8">
+                        <form asp-action="contact" asp-controller="Manager" method="post" class="php-email-form" >
+                            <div class="row gy-4">
+
+                                <div class="col-md-6">
+                                    <input type="text" asp-for="Name" class="form-control" placeholder="Your_Name" required="">
+                                </div>
+
+                                <div class="col-md-6 ">
+                                    <input type="email" class="form-control" asp-for="Email" placeholder="Your_Email" required="">
+                                </div>
+
+                                <div class="col-md-12">
+                                    <textarea class="form-control" asp-for="Message" rows="6" placeholder="Message" required=""></textarea>
+                                </div>
+
+                                <div class="col-md-12 text-center">
+                                    
+                                    <div class="error-message"></div>
+                                    <div class="sent-message">Your message has been sent. Thank you!</div>
+
+                                    <button type="submit">Send Message</button>
+                                </div>
+
+                            </div>
+                        </form>
+                    </div><!-- End Contact Form -->
+
+                </div>
+
+            </div>
+
+        </section><!-- /Contact Section -->
+
+    </main>
+
+    <footer id="footer" class="footer dark-background">
+
+        <div class="footer-top">
+            <div class="container">
+                <div class="row gy-4">
+                    <div class="col-lg-4 col-md-6 footer-about">
+                        <a href="index.html" class="logo d-flex align-items-center">
+                            <h1 class="sitename"><img src="~/image/HRoot_Logo-removebg-preview.png" style="max-height:46px !important" alt="Alternate Text" /></h1>
+                        </a>
+                        <div class="footer-contact pt-3">
+                            <p>Irbid</p>
+                            <p>Al-Sheikh Khalil St.</p>
+                            <p class="mt-3"><strong>Phone:</strong> <span>+962 797 777 999</span></p>
+                            <p><strong>Email:</strong> <span>hroot@info.com</span></p>
+                        </div>
+                        <div class="social-links d-flex mt-4">
+                            <a href=""><i class="bi bi-twitter-x"></i></a>
+                            <a href=""><i class="bi bi-facebook"></i></a>
+                            <a href=""><i class="bi bi-instagram"></i></a>
+                            <a href=""><i class="bi bi-linkedin"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2 col-md-3 footer-links">
+                        <h4>Useful Links</h4>
+                        <ul>
+                            <li><i class="bi bi-chevron-right"></i> <a href="#"> Home</a></li>
+                            <li><i class="bi bi-chevron-right"></i> <a href="#"> About us</a></li>
+                            <li><i class="bi bi-chevron-right"></i> <a href="#"> Services</a></li>
+                            <li><i class="bi bi-chevron-right"></i> <a href="#"> Terms of service</a></li>
+                            <li><i class="bi bi-chevron-right"></i> <a href="#"> Privacy policy</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-2 col-md-3 footer-links">
+                        <h4>Our Services</h4>
+                        <ul>
+                            <li><i class="bi bi-chevron-right"></i> <a href="#"> Web Design</a></li>
+                            <li><i class="bi bi-chevron-right"></i> <a href="#"> Web Development</a></li>
+                            <li><i class="bi bi-chevron-right"></i> <a href="#"> Product Management</a></li>
+                            <li><i class="bi bi-chevron-right"></i> <a href="#"> Marketing</a></li>
+                            <li><i class="bi bi-chevron-right"></i> <a href="#"> Graphic Design</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-4 col-md-12 footer-newsletter">
+                        <h4>Our Newsletter</h4>
+                        <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
+                        <form action="forms/newsletter.php" method="post" class="php-email-form">
+                            <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
+                            <div class="loading">Loading</div>
+                            <div class="error-message"></div>
+                            <div class="sent-message">Your subscription request has been sent. Thank you!</div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <div class="container text-center">
+                <p>© <span>Copyright</span> <strong class="px-1 sitename">HRoot Team</strong> <span>All Rights Reserved</span></p>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    @* <script src="~/js/validation.js"></script> *@
+    <script src="~/js/aos.js"></script>
+    <script src="~/js/bundle.js"></script>
+    <script src="~/js/glig.js"></script>
+    <script src="~/js/image.js"></script>
+    <script src="~/js/iso.js"></script>
+    <script src="~/js/jssss.js"></script>
+
+    <!-- Main JS File -->
+    <script src="~/js/main.js"></script>
+
+</body>
+
+</html>

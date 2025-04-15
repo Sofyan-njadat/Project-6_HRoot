@@ -1,0 +1,38 @@
+﻿@model Mission
+
+
+
+@{
+    var employee = Context.Session.GetString("nameemp");
+	var employeeid = Context.Session.GetInt32("idemp");
+	Layout = "~/Views/Shared/_ManagersLayout1.cshtml";
+}
+
+<h2>Assign Task to @employee</h2> 
+<a h asp-action="Show_Employee" asp-controller="Manager">Back_to_list</a>
+
+
+<form asp-controller="Manager" asp-action="CreateTask" method="post">
+    <input hidden name="Employeeid" asp-route-id="Employeeid" value="@employeeid" />
+
+    <div class="form-group">
+        <label for="TaskName">Employee Name</label>
+        <input type="text" disabled class="form-control" value="@Context.Session.GetString("EmployeeName")"  />
+    </div>
+    <div class="form-group">
+        <label for="TaskName">Task Name</label>
+        <input type="text" name="TaskName" class="form-control" required />
+    </div>
+
+    <div class="form-group">
+        <label for="StartDate">Start Date</label>
+        <input type="date" name="StartDate" class="form-control" required />
+    </div>
+
+    <div class="form-group">
+        <label for="EndDate">End Date</label>
+        <input type="date" name="EndDate" class="form-control" required />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Assign Task</button>
+</form>

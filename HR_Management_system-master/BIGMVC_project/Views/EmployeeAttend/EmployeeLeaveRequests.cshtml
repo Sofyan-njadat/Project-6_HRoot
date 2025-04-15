@@ -1,0 +1,55 @@
+﻿9 KB
+@using BIGMVC_project.Models
+@model IEnumerable<LeaveRequest>
+
+@{
+    ViewData["Title"] = "EmployeeLeaveRequests";
+    Layout = "~/Views/Shared/_LayoutGen.cshtml";
+}
+
+
+
+
+
+
+<div class="wrapper">
+
+
+    <div class="main-panel">
+
+        <h2 style=" text-align:center; margin: 50px auto; font-weight: bold; text-transform: capitalize;">Your Leave Requests</h2>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Leave Type</th>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                    <th>Reason</th>
+                    <th>Status</th>
+                    <th>Start Time</th>
+                    <th>End Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var request in Model)
+                {
+                    <tr>
+                        <td>@request.LeaveType</td>
+                        <td>@request.StartDate.ToShortDateString()</td>
+                        <td>@request.EndDate.ToShortDateString()</td>
+                        <td>@request.Reason</td>
+                        <td>@request.LeaveRequestsStatusEnum</td>
+                        <td>@(request.StartTime.HasValue ? request.StartTime.Value.ToString("HH:mm") : "N/A")</td>
+                        <td>@(request.EndTime.HasValue ? request.EndTime.Value.ToString("HH:mm") : "N/A")</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+
+
+
+    </div>
+
+</div>

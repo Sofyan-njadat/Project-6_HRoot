@@ -1,0 +1,114 @@
+﻿@model IEnumerable<BIGMVC_project.Models.Task>
+
+<div class="container mt-5">
+    <div class="row">
+        <!-- Card for HR -->
+        <div class="col-md-3 mb-4">
+            <div class="card text-white bg-primary">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="fas fa-users-cog"></i> Total HR</h5>
+                    <p class="card-text fs-3">@ViewBag.TotalHR</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card for Employees -->
+        <div class="col-md-3 mb-4">
+            <div class="card text-white bg-success">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="fas fa-users"></i> Total Employees</h5>
+                    <p class="card-text fs-3">@ViewBag.TotalEmployees</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card for Managers -->
+        <div class="col-md-3 mb-4">
+            <div class="card text-white bg-warning">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="fas fa-user-tie"></i> Total Managers</h5>
+                    <p class="card-text fs-3">@ViewBag.TotalManagers</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card for Departments -->
+        <div class="col-md-3 mb-4">
+            <div class="card text-white bg-info">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="fas fa-building"></i> Total Departments</h5>
+                    <p class="card-text fs-3">@ViewBag.TotalDepartments</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card for Tasks -->
+        <!-- عرض المهام -->
+        <h4 class="mt-5">Tasks List</h4>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Task Name</th>
+                    <th>Employee</th>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var task in ViewBag.Tasks)
+                {
+                    <tr>
+                        <td>@task.TaskName</td>
+                        <td>@task.Employee.Name</td>
+                        <td>@task.StartDate?.ToString("yyyy-MM-dd")</td>
+                        <td>@task.EndDate?.ToString("yyyy-MM-dd")</td>
+                        <td>@task.TasksStatusEnum</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    </div>
+
+<div class="container mt-5">
+    <!-- عرض الرسم البياني للموظفين حسب الأقسام -->
+    <h4>Employee Distribution by Department</h4>
+    <canvas id="employeeChart" width="400" height="200"></canvas>
+</div>
+
+<!-- إضافة Chart.js عبر CDN -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+    // جلب البيانات من ViewBag
+    var departmentEmployeeCount = @Html.Raw(Json.Serialize(ViewBag.DepartmentEmployeeCount));
+
+    // تجهيز البيانات للرسم البياني
+    var labels = departmentEmployeeCount.map(function(item) { return item.DepartmentName; });
+    var data = departmentEmployeeCount.map(function(item) { return item.EmployeeCount; });
+
+    // إعداد الرسم البياني باستخدام Chart.js
+    var ctx = document.getElementById('employeeChart').getContext('2d');
+    var employeeChart = new Chart(ctx, {
+        type: 'bar', // نوع الرسم البياني (يمكن تغييره إلى 'pie' أو 'line' حسب الحاجة)
+        data: {
+            labels: labels, // أسماء الأقسام
+            datasets: [{
+                label: 'Number of Employees', // عنوان البيانات
+                data: data, // عدد الموظفين
+                backgroundColor: 'rgba(54, 162, 235, 0.2)', // لون خلفية الأعمدة
+                borderColor: 'rgba(54, 162, 235, 1)', // لون حدود الأعمدة
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            scales: {
+                y: {
+                    beginAtZero: true // جعل المحور Y يبدأ من صفر
+                }
+            }
+        }
+    });
+</script>

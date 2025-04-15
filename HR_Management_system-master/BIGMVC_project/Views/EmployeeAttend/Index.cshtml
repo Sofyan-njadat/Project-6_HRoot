@@ -1,0 +1,85 @@
+﻿@model IEnumerable<BIGMVC_project.Models.Attendance> // data that will show in the page 
+
+
+@{
+    ViewData["Title"] = "View";
+    Layout = "~/Views/Shared/_LayoutGen.cshtml";
+}
+
+
+
+<div class="wrapper">
+
+
+    <div class="main-panel">
+
+        <h2 style=" text-align:center; margin: 50px auto; font-weight: bold; text-transform: capitalize;">Attendance</h2>
+        <table style="padding: 30px;" id="item_lists" class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Employee ID</th>
+                    <th>Punch In</th>
+                    <th>Punch Out</th>
+                    <th>Working Hours</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td style="padding: 20px">@item.EmployeeId</td>
+                        <td>@item.PunchIn</td>
+                        <td>@item.PunchOut</td>
+                        <td>
+                             @if (item.PunchIn.HasValue && item.PunchOut.HasValue) 
+                             {
+                                 var totalMinutes = (item.PunchOut.Value - item.PunchIn.Value).TotalMinutes; 
+                                 if (totalMinutes < 60) 
+                                 { 
+                                     @Math.Round(totalMinutes, 2) <span> mins</span> 
+                                } 
+                                else 
+                                { 
+                                    var totalHours = totalMinutes / 60; 
+                                     @Math.Round(totalHours, 2) <span> hrs</span> 
+                                } 
+                            }
+                            else
+                            {
+                                <span>Not Available</span>
+                            }
+                        </td>
+                        <td>
+                            @if (!item.PunchOut.HasValue)
+                            {
+                                <form method="post" asp-action="PunchOut">
+                                    <input type="hidden" name="attendanceId" value="@item.Id" />
+                                    <button type="submit" class="btn btn-danger">Punch Out</button>
+                                </form>
+                            }
+                            else
+                            {
+                                <button style="color: black" class="btn btn-danger disabled-button" disabled>Punch Out</button>
+                            }
+                        </td>
+
+                    </tr>
+                }
+            </tbody>
+
+
+        </table>
+        <hr>
+        @{
+            var lastPunchIn = Model.LastOrDefault()?.PunchIn;
+            var disablePunchInButton = lastPunchIn.HasValue && (DateTime.Now - lastPunchIn.Value).TotalHours < 1;
+        }
+
+       <form method="post" asp-action="PunchIn">
+    <button type="submit" class="btn btn-success @(disablePunchInButton ? "disabled-button" : "")" @(disablePunchInButton ? "disabled" : "")>Punch In</button>
+</form>
+
+    </div>
+
+</div>

@@ -1,0 +1,163 @@
+﻿@model IEnumerable<BIGMVC_project.Models.Employee>
+
+@{
+    ViewData["Title"] = "Show_Employee";
+    Layout = "~/Views/Shared/_ManagersLayout1.cshtml";
+}
+
+<h1>Show_Employee</h1>
+@section style{
+    <style>
+        /* تصميم مخصص لصفحة Show_Employee */
+        body {
+            background-color: #f8f9fa; /* خلفية فاتحة للصفحة */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* خط حديث */
+        }
+
+        h1 {
+            color: #2c3e50; /* لون أزرق غامق للعنوان */
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        a {
+            text-decoration: none; /* إزالة التسطير من الروابط */
+        }
+
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            background-color: #fff; /* خلفية بيضاء للجدول */
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* ظل ناعم للجدول */
+        }
+
+            .table thead th {
+                background-color: #34495e; /* لون أزرق غامق لرأس الجدول */
+                color: #fff;
+                font-weight: 600;
+                padding: 12px;
+                text-align: left;
+                border-bottom: 2px solid #2c3e50;
+            }
+
+            .table tbody tr {
+                transition: background-color 0.3s ease; /* تأثير hover سلس */
+            }
+
+                .table tbody tr:hover {
+                    background-color: #f1f1f1; /* لون رمادي فاتح عند hover */
+                }
+
+            .table td, .table th {
+                padding: 12px;
+                border-bottom: 1px solid #ddd; /* خط فاصل بين الصفوف */
+            }
+
+        .btn {
+            font-size: 14px;
+            font-weight: 500;
+            padding: 8px 12px;
+            margin: 2px;
+            border-radius: 5px;
+            transition: all 0.3s ease; /* تأثير hover سلس للأزرار */
+            display: inline-block;
+            text-align: center;
+        }
+
+        .btn-success {
+            background-color: #28a745; /* لون أخضر لزر Evaluation */
+            color: #fff;
+            border: none;
+        }
+
+            .btn-success:hover {
+                background-color: #218838; /* لون أخضر غامق عند hover */
+            }
+
+        .btn-primary {
+            background-color: #007bff; /* لون أزرق لزر Assign Task */
+            color: #fff;
+            border: none;
+        }
+
+            .btn-primary:hover {
+                background-color: #0056b3; /* لون أزرق غامق عند hover */
+            }
+
+        .btn-secondary {
+            background-color: #6c757d; /* لون رمادي لزر View Tasks و View Attendances */
+            color: #fff;
+            border: none;
+        }
+
+            .btn-secondary:hover {
+                background-color: #5a6268; /* لون رمادي غامق عند hover */
+            }
+    </style>
+}
+<p>
+    <a asp-action="Addemployee">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            @* <th> *@
+            @*     @Html.DisplayNameFor(model => model.PasswordHash) *@
+            @* </th> *@
+            <th>
+                Address
+            </th>
+            <th>
+                Position
+            </th>
+            <th>
+                Main_Operation
+            </th>
+            <th>
+                Other_operation
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            @* <td> *@
+            @*     @Html.DisplayFor(modelItem => item.PasswordHash) *@
+            @* </td> *@
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Position)
+            </td>
+            <td>
+                    <a asp-controller="Manager" asp-action="Questions" asp-route-id="@item.Id" class="btn btn-success">Evaluation</a>
+                    <a asp-controller="Manager" asp-action="AssignTasks" asp-route-id="@item.Id" class="btn btn-primary">Assign Task</a>
+            </td>
+            <td>
+                    <a asp-controller="Manager" asp-action="EmployeeTasks" asp-route-id="@item.Id" class="btn btn-secondary">View_Tasks</a>
+                    <a asp-controller="Manager" asp-action="EmployeeAttendances" asp-route-id="@item.Id" class="btn btn-secondary">View Attendancs</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

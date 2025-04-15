@@ -1,0 +1,31 @@
+﻿@model List<Mission>
+
+@{
+    var employee = ViewBag.Employee as BIGMVC_project.Models.Employee;
+	Layout = "~/Views/Shared/_ManagersLayout1.cshtml";
+}
+
+<h2>Tasks for @employee.Name</h2>
+<a asp-action="Show_Employee" asp-controller="Manager">Back_to_list</a>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Task Name</th>
+            <th>Status</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var task in Model)
+        {
+            <tr>
+                <td>@task.TaskName</td>
+                <td>@task.TasksStatusEnum</td>
+                <td>@task.StartDate</td>
+                <td>@task.EndDate</td>
+            </tr>
+        }
+    </tbody>
+</table>

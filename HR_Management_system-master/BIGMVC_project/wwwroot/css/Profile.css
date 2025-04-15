@@ -1,0 +1,139 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f6fc;
+}
+
+.container {
+    /* display: flex
+; */
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 800px;
+    margin-top: 51px !important;
+    padding: 33px !important;
+}
+
+.sidebar {
+    background-color: #1e3a8a;
+    color: white;
+    padding: 40px;
+    text-align: center;
+    width: 250px;
+}
+
+    .sidebar img {
+        width: 120px;
+        border-radius: 50%;
+        border: 4px solid #3b82f6;
+    }
+
+    .sidebar h2 {
+        margin: 20px 0 10px;
+    }
+
+    .sidebar nav a {
+        display: block;
+        color: white;
+        text-decoration: none;
+        margin: 10px 0;
+        font-size: 18px;
+        transition: color 0.3s;
+    }
+
+        .sidebar nav a:hover {
+            color: #93c5fd;
+        }
+
+.main-content {
+    padding: 40px;
+    width: 100%;
+}
+
+    .main-content h1 {
+        font-size: 32px;
+        margin-bottom: 20px;
+        color: #1e3a8a;
+    }
+
+.info {
+    margin-bottom: 20px;
+}
+
+    .info p {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .info span {
+        font-weight: bold;
+    }
+
+.buttons button, .forgot a {
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background 0.3s;
+}
+
+.reset-btn {
+    background-color: #2563eb;
+    color: white;
+}
+
+.edit-btn {
+    background-color: #3b82f6;
+    color: white;
+}
+
+    .reset-btn:hover, .edit-btn:hover {
+        background-color: #1e40af;
+    }
+
+.forgot a {
+    color: #2563eb;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+    .forgot a:hover {
+        text-decoration: underline;
+    }
+
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button.btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    button.btn:hover {
+        background-color: #0056b3;
+    }

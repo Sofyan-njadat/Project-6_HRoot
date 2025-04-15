@@ -1,0 +1,18 @@
+﻿@model BIGMVC_project.Models.Hr
+
+@{
+    ViewData["Title"] = "HR Details";
+}
+
+<h1>HR Details</h1>
+
+<hr />
+
+<div>
+    <p><strong>Name:</strong> @Model.Name</p>
+    <p><strong>Email:</strong> @Model.Email</p>
+    <p><strong>Password Hash:</strong> @Model.PasswordHash</p>
+    <p><strong>Image:</strong> @Model.Image</p>
+</div>
+
+<a asp-action="Index" class="btn btn-secondary">Back to List</a>

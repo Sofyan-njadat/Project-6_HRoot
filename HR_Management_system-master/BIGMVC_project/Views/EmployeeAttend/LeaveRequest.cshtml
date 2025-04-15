@@ -1,0 +1,124 @@
+﻿@using BIGMVC_project.Models
+@model LeaveRequest
+
+
+@{
+	ViewData["Title"] = "View";
+	Layout = "~/Views/Shared/_LayoutGen.cshtml";
+}
+
+<div class="wrapper">
+
+
+	<div class="main-panel">
+
+
+		<h2 style=" text-align:center; margin: 50px auto; font-weight: bold; text-transform: capitalize;">Leave Or Vacation</h2>
+		<form style="padding: 30px;" method="post" asp-action="SubmitLeaveRequest">
+			<div class="form-group">
+				<label for="EmployeeName">Employee Name</label>
+				<input type="text" class="form-control" id="EmployeeName" name="EmployeeName" value="@ViewBag.EmployeeName" readonly />
+			</div>
+
+			<!-- Radio buttons for Leave or Vacation -->
+			<div class="form-group">
+				<label>Request Type</label><br />
+				<div class="form-check form-check-inline">
+					<input style="margin-left: 3px;" class="form-check-input" type="radio" name="RequestType" id="RequestTypeVacation" value="Vacation" checked>
+					<label class="form-check-label" for="RequestTypeVacation">Vacation</label>
+				</div>
+				<div class="form-check form-check-inline">
+					<input style="margin-left: 3px;" class="form-check-input" type="radio" name="RequestType" id="RequestTypeLeave" value="Leave">
+					<label class="form-check-label" for="RequestTypeLeave">Leave</label>
+				</div><a href="c:\orangeacadyme\mvc\tasks\bigmvc_project\bigmvc_project\views\employeeattend\leaverequest.cshtml"></a>
+			</div>
+
+			<!-- Leave Type Dropdown (visible only for Leave) -->
+			<div class="form-group" id="LeaveTypeGroup">
+				<label for="LeaveType">Leave Type</label>
+
+
+				<select class="form-control" id="LeaveType" name="LeaveType">
+					<option value="Sick">Sick</option>
+					<option value="Personal">Personal</option>
+
+				</select>
+			</div>
+
+			<!-- Start Date and End Date -->
+			<div class="form-group">
+				<label for="StartDate">Start Date</label>
+				<input type="date" class="form-control" id="StartDate" name="StartDate" required />
+			</div>
+
+			<div class="form-group">
+				<label for="EndDate">End Date</label>
+				<input type="date" class="form-control" id="EndDate" name="EndDate" required />
+			</div>
+
+			<!-- Start Time and End Time (visible only for Leave) -->
+			<div class="form-group" id="StartTimeGroup">
+				<label for="StartTime">Start Time</label>
+				<input type="time" class="form-control" id="StartTime" name="StartTime" />
+			</div>
+
+			<div class="form-group" id="EndTimeGroup">
+				<label for="EndTime">End Time</label>
+				<input type="time" class="form-control" id="EndTime" name="EndTime" />
+			</div>
+
+			<!-- Reason -->
+			<div class="form-group">
+				<label for="Reason">Reason</label>
+				<textarea class="form-control" id="Reason" name="Reason" required></textarea>
+			</div>
+
+			<div class="btns">
+				<button type="submit" class="btn btn-primary">Submit Leave Request</button>
+				<a href="@Url.Action("EmployeeLeaveRequests", "EmployeeAttend")" class="btn btn-secondary">View My Leave Requests</a>
+
+			</div>
+
+		</form>
+
+
+		<script>
+			// Function to toggle visibility of fields based on Request Type
+			function toggleFields() {
+				var requestType = document.querySelector('input[name="RequestType"]:checked').value;
+
+				if (requestType === "Leave") {
+					// Show Leave Type, Start Time, and End Time
+					document.getElementById("LeaveTypeGroup").style.display = "block";
+					document.getElementById("StartTimeGroup").style.display = "block";
+					document.getElementById("EndTimeGroup").style.display = "block";
+				} else if (requestType === "Vacation") {
+					// Hide Leave Type, Start Time, and End Time
+					document.getElementById("LeaveTypeGroup").style.display = "none";
+					document.getElementById("StartTimeGroup").style.display = "none";
+					document.getElementById("EndTimeGroup").style.display = "none";
+				}
+			}
+
+			// Call the function on page load to set the initial state
+			window.onload = function () {
+				toggleFields();
+			};
+
+			// Add event listeners to radio buttons to toggle fields dynamically
+			document.querySelectorAll('input[name="RequestType"]').forEach(function (radio) {
+				radio.addEventListener("change", toggleFields);
+			});
+		</script>
+
+
+	</div>
+
+</div>
+
+
+
+	</div>
+
+</div>
+

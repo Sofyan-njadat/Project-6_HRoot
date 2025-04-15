@@ -1,0 +1,8 @@
+C:\Users\Orange\source\repos\HR_Management_system-master\BIGMVC_project\obj\Debug\net8.0\BIGMVC_project.csproj.AssemblyReference.cache
+C:\Users\Orange\source\repos\HR_Management_system-master\BIGMVC_project\obj\Debug\net8.0\BIGMVC_project.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Orange\source\repos\HR_Management_system-master\BIGMVC_project\obj\Debug\net8.0\BIGMVC_project.AssemblyInfoInputs.cache
+C:\Users\Orange\source\repos\HR_Management_system-master\BIGMVC_project\obj\Debug\net8.0\BIGMVC_project.AssemblyInfo.cs
+C:\Users\Orange\source\repos\HR_Management_system-master\BIGMVC_project\obj\Debug\net8.0\BIGMVC_project.csproj.CoreCompileInputs.cache
+C:\Users\Orange\source\repos\HR_Management_system-master\BIGMVC_project\obj\Debug\net8.0\BIGMVC_project.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Orange\source\repos\HR_Management_system-master\BIGMVC_project\obj\Debug\net8.0\BIGMVC_project.RazorAssemblyInfo.cache
+C:\Users\Orange\source\repos\HR_Management_system-master\BIGMVC_project\obj\Debug\net8.0\BIGMVC_project.RazorAssemblyInfo.cs

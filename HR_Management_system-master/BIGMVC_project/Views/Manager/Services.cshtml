@@ -1,0 +1,246 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services Page</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- AOS CSS for animations -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link href="~/css/booot.css" rel="stylesheet">
+    <link href="/css/booticon.css" rel="stylesheet">
+    <link href="~/css/aos.css" rel="stylesheet">
+    <link href="~/css/glig.css" rel="stylesheet">
+    <link href="~/css/swiper.css" rel="stylesheet">
+    <link href="~/css/Mainn.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Hero Section */
+        #hero {
+			background-image: url('image\hero-bg1.jpg');
+            color: #fff;
+            padding: 150px 0;
+            text-align: center;
+        }
+
+            #hero h1 {
+                font-size: 3.5rem;
+                font-weight: 700;
+                margin-bottom: 20px;
+                animation: fadeInDown 1s ease-in-out;
+            }
+
+            #hero p {
+                font-size: 1.25rem;
+                animation: fadeInUp 1s ease-in-out;
+            }
+
+        /* Services Section */
+        .services {
+            padding: 80px 0;
+            background: #eeeeee;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+            .section-title h2 {
+                font-size: 2.5rem;
+                font-weight: 700;
+                color: #007bff;
+                margin-bottom: 10px;
+                animation: fadeIn 1s ease-in-out;
+            }
+
+            .section-title p {
+                font-size: 1.1rem;
+                color: #666;
+                animation: fadeIn 1s ease-in-out;
+            }
+
+        .service-item {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+            .service-item:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+            }
+
+            .service-item .icon {
+                font-size: 2.5rem;
+                color: #FF4A17;
+                margin-bottom: 20px;
+                transition: transform 0.3s ease;
+            }
+
+            .service-item:hover .icon {
+                transform: rotate(15deg);
+            }
+
+            .service-item h3 {
+                font-size: 1.5rem;
+                font-weight: 600;
+                margin-bottom: 15px;
+                color: #333;
+            }
+
+            .service-item p {
+                font-size: 1rem;
+                color: #666;
+            }
+
+        /* Animations */
+    </style>
+</head>
+<body>
+    <header id="header" class="header d-flex align-items-center fixed-top">
+        <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+            <a href="index.html" class="logo d-flex align-items-center me-auto me-lg-0">
+                <!-- Uncomment the line below if you also wish to use an image logo -->
+                <!-- <img src="assets/img/logo.png" alt=""> -->
+                <h1 class="sitename"><img src="~/image/HRoot_Logo-removebg-preview.png" style="max-height:46px !important" alt="Alternate Text" /></h1>
+                <span>.</span>
+            </a>
+
+            <nav id="navmenu" class="navmenu">
+                <ul>
+                    <li><a href="#hero" class="active">Home<br></a></li>
+                    <li><a asp-controller="Manager" asp-action="About_us">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            </nav>
+
+            <a asp-controller="Login" asp-action="Index" id="ss" class="cta-btn">Login</a>
+
+        </div>
+    </header>
+    <!-- Hero Section -->
+    <section id="hero" class="hero d-flex align-items-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center" data-aos="fade-up">
+                    <h1>Our Services</h1>
+                    <p>Explore the wide range of services we offer to help your business grow.</p>
+                </div>
+            </div>
+        </div>
+    </section><!-- End Hero Section -->
+    <!-- Services Section -->
+    <section id="services" class="services section">
+
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+            <h2>Services</h2>
+            <p>Check our Services</p>
+        </div><!-- End Section Title -->
+
+        <div class="container">
+
+            <div class="row gy-4">
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-item position-relative">
+                        <div class="icon">
+                            <i class="bi bi-people"></i>
+                        </div>
+                        <h3>Employee Management</h3>
+                        </a>
+                        <p>Manage employee profiles, track attendance, and monitor work progress efficiently.</p>
+                    </div>
+                </div><!-- End Service Item -->
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-item position-relative">
+                        <div class="icon">
+                            <i class="bi bi-kanban"></i>
+                        </div>
+                        <h3>Task & Workflow Automation</h3>
+                        </a>
+                        <p>Assign, track, and manage tasks using a structured workflow with status tracking (To Do, Doing, Done).</p>
+                    </div>
+                </div><!-- End Service Item -->
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-item position-relative">
+                        <div class="icon">
+                            <i class="bi bi-calendar-check"></i>
+                        </div>
+                        <h3> Leave & Vacation Management </h3>
+                        </a>
+                        <p>Allow employees to request leave, managers to approve/reject requests, and HR to oversee all leave records.</p>
+                    </div>
+                </div><!-- End Service Item -->
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-item position-relative">
+                        <div class="icon">
+                            <i class="bi bi-clock-history"></i>
+                        </div>
+                        <h3>Attendance Tracking</h3>
+                        </a>
+                        <p>Employees can punch in and out, while managers and HR can monitor attendance records.</p>
+                    </div>
+                </div><!-- End Service Item -->
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+                    <div class="service-item position-relative">
+                        <div class="icon">
+                            <i class="bi bi-graph-up"></i>
+                        </div>
+                        <h3>Performance Evaluation</h3>
+                        </a>
+                        <p>Managers can assess employee performance with structured evaluation forms and feedback.</p>
+                    </div>
+                </div><!-- End Service Item -->
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+                    <div class="service-item position-relative">
+                        <div class="icon">
+                            <i class="bi bi-building"></i>
+                        </div>
+                        <h3>Department & Role Management</h3>
+                        </a>
+                        <p>HR can create departments, assign managers, and structure the company's hierarchy.</p>
+                    </div>
+                </div><!-- End Service Item -->
+
+            </div>
+
+        </div>
+
+    </section><!-- /Services Section -->
+    <!-- Bootstrap JS and dependencies -->
+    @* <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script> *@
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <!-- AOS JS for animations -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <!-- Initialize AOS -->
+    <script>
+        AOS.init();
+    </script>
+</body>

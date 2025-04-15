@@ -1,0 +1,38 @@
+﻿@model List<Employee>
+@{
+    ViewData["Title"] = "Employees";
+}
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4 text-primary">Employees List</h2>
+
+    <table class="table table-bordered table-striped text-center">
+        <thead class="table-primary">
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Position</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var Employee in Model)
+            {
+                <tr>
+                    <td>@Employee.Name</td>
+                    <td>@Employee.Email</td>
+                    <td>@Employee.Position</td>
+                    <td>
+                        <div class="d-flex justify-content-around">
+                            <a href="@Url.Action("AssignTasks", "Manager", new { id = Employee.Id })" class="btn btn-primary">Assign Task</a>
+                            <a href="@Url.Action("EmployeeTasks", "Manager", new { id = Employee.Id })" class="btn btn-secondary">View Tasks</a>
+                            <a href="@Url.Action("EmployeeAttendances", "Manager", new { id = Employee.Id })" class="btn btn-secondary">View Attendancs</a>
+
+                        </div>
+
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

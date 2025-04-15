@@ -1,0 +1,265 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = BIGMVC_project
+build_property.RootNamespace = BIGMVC_project
+build_property.ProjectDir = C:\Users\Orange\source\repos\HR_Management_system-master\BIGMVC_project\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Orange\source\repos\HR_Management_system-master\BIGMVC_project
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 8.0
+build_property.EnableCodeStyleSeverity = 
+
+[C:/Users/Orange/source/repos/HR_Management_system-master/BIGMVC_project/Views/EmployeeAttend/Dashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVBdHRlbmRcRGFzaGJvYXJkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/source/repos/HR_Management_system-master/BIGMVC_project/Views/EmployeeAttend/EditProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVBdHRlbmRcRWRpdFByb2ZpbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/source/repos/HR_Management_system-master/BIGMVC_project/Views/EmployeeAttend/EmployeeLeaveRequests.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVBdHRlbmRcRW1wbG95ZWVMZWF2ZVJlcXVlc3RzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/source/repos/HR_Management_system-master/BIGMVC_project/Views/EmployeeAttend/Evaluation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVBdHRlbmRcRXZhbHVhdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/source/repos/HR_Management_system-master/BIGMVC_project/Views/EmployeeAttend/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVBdHRlbmRcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/source/repos/HR_Management_system-master/BIGMVC_project/Views/EmployeeAttend/LeaveRequest.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVBdHRlbmRcTGVhdmVSZXF1ZXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/source/repos/HR_Management_system-master/BIGMVC_project/Views/EmployeeAttend/Profile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVBdHRlbmRcUHJvZmlsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/source/repos/HR_Management_system-master/BIGMVC_project/Views/EmployeeAttend/ViewTasks.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVBdHRlbmRcVmlld1Rhc2tzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/source/repos/HR_Management_system-master/BIGMVC_project/Views/Hrs/AddManager.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSHJzXEFkZE1hbmFnZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/source/repos/HR_Management_system-master/BIGMVC_project/Views/Hrs/Createe.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSHJzXENyZWF0ZWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/source/repos/HR_Management_system-master/BIGMVC_project/Views/Hrs/Dashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSHJzXERhc2hib2FyZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/source/repos/HR_Management_system-master/BIGMVC_project/Views/Hrs/Delet.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSHJzXERlbGV0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/source/repos/HR_Management_system-master/BIGMVC_project/Views/Hrs/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSHJzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/source/repos/HR_Management_system-master/BIGMVC_project/Views/Hrs/Department.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSHJzXERlcGFydG1lbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/source/repos/HR_Management_system-master/BIGMVC_project/Views/Hrs/DepartmentCreate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSHJzXERlcGFydG1lbnRDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/source/repos/HR_Management_system-master/BIGMVC_project/Views/Hrs/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSHJzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/source/repos/HR_Management_system-master/BIGMVC_project/Views/Hrs/Employee.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSHJzXEVtcGxveWVlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/source/repos/HR_Management_system-master/BIGMVC_project/Views/Hrs/EmployeeCreate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSHJzXEVtcGxveWVlQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/source/repos/HR_Management_system-master/BIGMVC_project/Views/Hrs/EmployeeDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSHJzXEVtcGxveWVlRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/source/repos/HR_Management_system-master/BIGMVC_project/Views/Hrs/EmployeeEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSHJzXEVtcGxveWVlRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/source/repos/HR_Management_system-master/BIGMVC_project/Views/Hrs/Evaluation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSHJzXEV2YWx1YXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/source/repos/HR_Management_system-master/BIGMVC_project/Views/Hrs/EvaluationDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSHJzXEV2YWx1YXRpb25EZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/source/repos/HR_Management_system-master/BIGMVC_project/Views/Hrs/Feedback.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSHJzXEZlZWRiYWNrLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/source/repos/HR_Management_system-master/BIGMVC_project/Views/Hrs/HRDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSHJzXEhSRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/source/repos/HR_Management_system-master/BIGMVC_project/Views/Hrs/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSHJzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/source/repos/HR_Management_system-master/BIGMVC_project/Views/Hrs/LeaveRequests.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSHJzXExlYXZlUmVxdWVzdHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/source/repos/HR_Management_system-master/BIGMVC_project/Views/Hrs/Manager.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSHJzXE1hbmFnZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/source/repos/HR_Management_system-master/BIGMVC_project/Views/Hrs/ManagerDelete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSHJzXE1hbmFnZXJEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/source/repos/HR_Management_system-master/BIGMVC_project/Views/Hrs/ManagerEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSHJzXE1hbmFnZXJFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/source/repos/HR_Management_system-master/BIGMVC_project/Views/Hrs/View.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSHJzXFZpZXcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/source/repos/HR_Management_system-master/BIGMVC_project/Views/Login/EmployeeLogin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cRW1wbG95ZWVMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/source/repos/HR_Management_system-master/BIGMVC_project/Views/Login/ForgotPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cRm9yZ290UGFzc3dvcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/source/repos/HR_Management_system-master/BIGMVC_project/Views/Login/HRLogin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSFJMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/source/repos/HR_Management_system-master/BIGMVC_project/Views/Login/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/source/repos/HR_Management_system-master/BIGMVC_project/Views/Login/ManagerLogin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cTWFuYWdlckxvZ2luLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/source/repos/HR_Management_system-master/BIGMVC_project/Views/Login/ResetPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cUmVzZXRQYXNzd29yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/source/repos/HR_Management_system-master/BIGMVC_project/Views/Manager/About_us.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlclxBYm91dF91cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/source/repos/HR_Management_system-master/BIGMVC_project/Views/Manager/Addemployee.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlclxBZGRlbXBsb3llZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/source/repos/HR_Management_system-master/BIGMVC_project/Views/Manager/AssignTasks.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlclxBc3NpZ25UYXNrcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/source/repos/HR_Management_system-master/BIGMVC_project/Views/Manager/contact.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlclxjb250YWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/source/repos/HR_Management_system-master/BIGMVC_project/Views/Manager/ContactUs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlclxDb250YWN0VXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/source/repos/HR_Management_system-master/BIGMVC_project/Views/Manager/EditProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlclxFZGl0UHJvZmlsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/source/repos/HR_Management_system-master/BIGMVC_project/Views/Manager/EmployeeAttendances.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlclxFbXBsb3llZUF0dGVuZGFuY2VzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/source/repos/HR_Management_system-master/BIGMVC_project/Views/Manager/EmployeeTasks.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlclxFbXBsb3llZVRhc2tzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/source/repos/HR_Management_system-master/BIGMVC_project/Views/Manager/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlclxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/source/repos/HR_Management_system-master/BIGMVC_project/Views/Manager/Index1.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlclxJbmRleDEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/source/repos/HR_Management_system-master/BIGMVC_project/Views/Manager/LeavingR.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlclxMZWF2aW5nUi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/source/repos/HR_Management_system-master/BIGMVC_project/Views/Manager/Profile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlclxQcm9maWxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/source/repos/HR_Management_system-master/BIGMVC_project/Views/Manager/Questions.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlclxRdWVzdGlvbnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/source/repos/HR_Management_system-master/BIGMVC_project/Views/Manager/Services.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlclxTZXJ2aWNlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/source/repos/HR_Management_system-master/BIGMVC_project/Views/Manager/Show_Employee.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlclxTaG93X0VtcGxveWVlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/source/repos/HR_Management_system-master/BIGMVC_project/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/source/repos/HR_Management_system-master/BIGMVC_project/Views/Shared/_ManagersLayout1.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9NYW5hZ2Vyc0xheW91dDEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/source/repos/HR_Management_system-master/BIGMVC_project/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/source/repos/HR_Management_system-master/BIGMVC_project/Views/User1/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcjFcTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/source/repos/HR_Management_system-master/BIGMVC_project/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/source/repos/HR_Management_system-master/BIGMVC_project/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/source/repos/HR_Management_system-master/BIGMVC_project/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-aqm5tlfhd6
+
+[C:/Users/Orange/source/repos/HR_Management_system-master/BIGMVC_project/Views/Shared/_LayoutGen.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRHZW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-wgzd9ikrgx

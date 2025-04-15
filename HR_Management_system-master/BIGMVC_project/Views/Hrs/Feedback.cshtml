@@ -1,0 +1,84 @@
+﻿<head>
+    <style>
+        /* تغيير خلفية الصفحة إلى اللون الأبيض */
+        body {
+            background-color: white; /* تحديد اللون الأبيض لخلفية الصفحة */
+            color: black; /* جعل النص باللون الأسود */
+            font-family: Arial, sans-serif; /* تعيين نوع الخط */
+        }
+
+        /* تصميم بطاقات (Cards) */
+        .card {
+            background-color: white; /* تعيين الخلفية البيضاء للبطاقات */
+            border: 1px solid #ddd; /* إضافة حدود للبطاقات بلون رمادي */
+        }
+
+        .card-header {
+            background-color: #f7f7f7; /* لون خلفية الرأس */
+            color: black;
+        }
+
+        .card-body {
+            background-color: white; /* تأكيد أن جسم البطاقة له خلفية بيضاء */
+            color: #333; /* لون النص في البطاقة */
+        }
+
+        .card-footer {
+            background-color: #f7f7f7; /* لون خلفية التذييل */
+            color: black;
+        }
+
+        /* تخصيص النص داخل الحقل عند التحديد */
+        textarea.form-control {
+            background-color: #f0f0f0; /* خلفية فاتحة لحقل النص */
+            color: #333; /* نص داكن */
+        }
+
+        .alert-success {
+            background-color: rgba(21, 34, 43, 0.85);
+        }
+    </style>
+</head>
+
+<h2 style="color:black">Feedback Inbox</h2>
+
+<div class="container">
+    @foreach (var feedback in Model)
+    {
+        <div class="card mb-3 shadow-sm">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <strong>@feedback.Name</strong>
+                <small class="text-muted">
+                    <i class="fa fa-clock"></i> @(feedback.SubmittedAt?.ToString("yyyy-MM-dd HH:mm") ?? "No Date")
+                </small>
+            </div>
+            <div class="card-body">
+                <p class="card-text">@feedback.Message</p>
+
+                @if (!string.IsNullOrEmpty(feedback.ReplyMessage))
+                {
+                    <div class="alert alert-success mt-3">
+                        <strong>Reply:</strong> @feedback.ReplyMessage
+                    </div>
+                }
+
+                <!-- نموذج الرد -->
+                <form asp-action="ReplyToFeedback" method="post">
+                    <input type="hidden" name="id" value="@feedback.Id" />
+                    <div class="form-group">
+                        <label for="reply">Reply:</label>
+                        <textarea class="form-control" name="reply" rows="2" required style="background-color: #f0f0f0; color: #333;"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-sm mt-2">
+                        <i class="fa fa-reply"></i> Send Reply
+                    </button>
+                </form>
+            </div>
+            <div class="card-footer text-muted">
+                <small>
+                    <i class="fa fa-envelope"></i> @feedback.Email
+                </small>
+            </div>
+        </div>
+    }
+</div>

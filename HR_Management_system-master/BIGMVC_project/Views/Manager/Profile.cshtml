@@ -1,0 +1,38 @@
+﻿@model Manager
+
+@{
+    // Layout = "~/Views/Shared/_ManagersLayout1.cshtml";
+	Layout = null;
+    ViewData["Title"] = "Profile";
+}
+<link href="/css/Profile.css" rel="stylesheet" />
+
+<div class="container">
+    <div class="sidebar">
+
+        @if(@Model.Image != null){
+         <img src="~/Images/@Model.Image" alt="Profile Picture">
+        }
+        else 
+         {
+            <img src="https://i.pinimg.com/474x/b9/e0/e3/b9e0e30ac1ec95077b7e1d0abd250e5d.jpg" alt="Profile Picture">
+         }
+        <h2>@Context.Session.GetString("name")</h2>
+
+    </div>
+    <div class="main-content">
+        <h1> My Profile</h1>
+        <div class="info">
+            <p><span>Full Name:</span>@Model.Name</p>
+            <p><span>Email:</span>@Model.Email</p>
+
+        </div>
+        <div class="buttons">
+            <button class="reset-btn">Reset Password</button>
+            <a asp-controller="Manager" asp-action="EditProfile" class="btn btn-primary">Edit Profile</a>
+        </div>
+        <div class="forgot">
+            <a asp-action="ForgotPassword" asp-controller="Login">Forgot Password?</a>
+        </div>
+    </div>
+</div>

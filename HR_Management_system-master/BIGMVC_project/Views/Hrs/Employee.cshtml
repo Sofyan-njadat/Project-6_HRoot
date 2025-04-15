@@ -1,0 +1,35 @@
+﻿@model IEnumerable<BIGMVC_project.Models.Employee>
+
+@{
+    ViewData["Title"] = "Employees";
+}
+
+<h1>Employees</h1>
+<hr />
+<a asp-action="EmployeeToPDF" class="btn btn-primary">Download PDF</a>
+
+<div class="row mt-3">
+    @foreach (var item in Model)
+    {
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <div class="card-header">
+                    <div class="d-flex align-items-center">
+                        <h5>@item.Name</h5>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <p><strong>Email:</strong> @item.Email</p>
+                    <p><strong>Address:</strong> @item.Address</p>
+                    <p><strong>Position:</strong> @item.Position</p>
+                    <p><strong>Department:</strong> @(item.Department != null ? item.Department.Name : "No Department Assigned")</p>
+                    <p><strong>Manager:</strong> @(item.Manager != null ? item.Manager.Name : "No Manager Assigned")</p>
+                </div>
+                @* <div class="card-footer"> *@
+                @*     <a asp-action="EmployeeEdit" asp-route-id="@item.Id" class="btn btn-warning">Edit</a> *@
+                @*     <a asp-action="EmployeeDelete" asp-route-id="@item.Id" class="btn btn-danger">Delete</a> *@
+                @* </div> *@
+            </div>
+        </div>
+    }
+</div>

@@ -1,0 +1,59 @@
+﻿<head>
+    <style>
+        /* تغيير خلفية الصفحة إلى اللون الأبيض */
+        body {
+            background-color: white; /* تحديد اللون الأبيض لخلفية الصفحة */
+            color: black; /* جعل النص باللون الأسود */
+            font-family: Arial, sans-serif; /* تعيين نوع الخط */
+        }
+
+        /* تصميم الجدول */
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+            .table th, .table td {
+                border: 1px solid #ddd;
+                padding: 8px;
+                text-align: left;
+            }
+
+            .table th {
+                background-color: #f2f2f2;
+            }
+
+        .btn {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<h2 style="color:black;">Leave Requests</h2>
+<br />
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Employee ID</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>Reason</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var request in Model)
+        {
+            <tr>
+                <td>@request.EmployeeId</td>
+                <td>@request.StartDate.ToString("yyyy-MM-dd")</td>
+                <td>@request.EndDate.ToString("yyyy-MM-dd")</td>
+                <td>@request.Reason</td>
+                <td>@request.LeaveRequestsStatusEnum</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a href="@Url.Action("ExportLeaveRequestsToPDF")" class="btn btn-primary">Download PDF</a>

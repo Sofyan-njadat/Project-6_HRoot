@@ -1,0 +1,130 @@
+﻿@using BIGMVC_project.Models
+@{
+	ViewData["Title"] = "View Tasks";
+	Layout = "~/Views/Shared/_LayoutGen.cshtml";
+
+}
+
+
+
+<div class="wrapper">
+
+
+	<div class="main-panel">
+
+
+		<h2 class="text-center mb-4">View Tasks</h2>
+
+		<div class="row">
+			<!-- To Do Tasks -->
+			<div class="col-md-4">
+				<div class="card border-info mb-4 task-card">
+					<div class="card-header bg-info text-white">
+						<h3 style="padding: 10px" class="card-title"><i class="fas fa-tasks"></i> To Do</h3>
+					</div>
+					<div class="card-body">
+						@foreach (var task in ViewBag.ToDoTasks)
+						{
+							<div class="card mb-3 shadow-sm task-card">
+								<div class="card-body">
+									<h5 class="card-title"><i class="fas fa-clipboard-list"></i> @task.TaskName</h5>
+									<p class="card-text">
+										<i class="fas fa-calendar-day"></i> <strong>Start Date:</strong> @task.StartDate?.ToString("yyyy-MM-dd")<br>
+										<i class="fas fa-calendar-check"></i> <strong>End Date:</strong> @task.EndDate?.ToString("yyyy-MM-dd")<br>
+										<i class="fas fa-info-circle"></i> <strong>Status:</strong> @task.TasksStatusEnum
+									</p>
+									<form method="post" asp-action="UpdateTaskStatus" asp-controller="EmployeeAttend">
+										<input type="hidden" name="taskId" value="@task.Id" />
+										<select name="status" class="form-control mb-2">
+											<option value="To Do" selected="@(task.TasksStatusEnum == "To Do")">To Do</option>
+											<option value="Doing" selected="@(task.TasksStatusEnum == "Doing")">Doing</option>
+											<option value="Done" selected="@(task.TasksStatusEnum == "Done")">Done</option>
+										</select>
+										<button type="submit" class="btn btn-info btn-sm w-100 btn-update">
+											<i class="fas fa-sync-alt"></i> Update
+										</button>
+									</form>
+								</div>
+							</div>
+						}
+					</div>
+				</div>
+			</div>
+
+			<!-- Doing Tasks -->
+			<div class="col-md-4">
+				<div class="card border-warning mb-4 task-card">
+					<div class="card-header bg-warning text-white">
+						<h3 style="padding: 10px" class="card-title"><i class="fas fa-spinner"></i> Doing</h3>
+					</div>
+					<div class="card-body">
+						@foreach (var task in ViewBag.DoingTasks)
+						{
+							<div class="card mb-3 shadow-sm task-card">
+								<div class="card-body">
+									<h5 class="card-title"><i class="fas fa-clipboard-list"></i> @task.TaskName</h5>
+									<p class="card-text">
+										<i class="fas fa-calendar-day"></i> <strong>Start Date:</strong> @task.StartDate?.ToString("yyyy-MM-dd")<br>
+										<i class="fas fa-calendar-check"></i> <strong>End Date:</strong> @task.EndDate?.ToString("yyyy-MM-dd")<br>
+										<i class="fas fa-info-circle"></i> <strong>Status:</strong> @task.TasksStatusEnum
+									</p>
+									<form method="post" asp-action="UpdateTaskStatus" asp-controller="EmployeeAttend">
+										<input type="hidden" name="taskId" value="@task.Id" />
+										<select name="status" class="form-control mb-2">
+											<option value="To Do" selected="@(task.TasksStatusEnum == "To Do")">To Do</option>
+											<option value="Doing" selected="@(task.TasksStatusEnum == "Doing")">Doing</option>
+											<option value="Done" selected="@(task.TasksStatusEnum == "Done")">Done</option>
+										</select>
+										<button type="submit" class="btn btn-warning btn-sm w-100 btn-update">
+											<i class="fas fa-sync-alt"></i> Update
+										</button>
+									</form>
+								</div>
+							</div>
+						}
+					</div>
+				</div>
+			</div>
+
+			<!-- Done Tasks -->
+			<div class="col-md-4">
+				<div class="card border-success mb-4 task-card">
+					<div class="card-header bg-success text-white">
+						<h3 style="padding: 10px" class="card-title"><i class="fas fa-check-circle"></i> Done</h3>
+					</div>
+					<div class="card-body">
+						@foreach (var task in ViewBag.DoneTasks)
+						{
+							<div class="card mb-3 shadow-sm task-card">
+								<div class="card-body">
+									<h5 class="card-title"><i class="fas fa-clipboard-list"></i> @task.TaskName</h5>
+									<p class="card-text">
+										<i class="fas fa-calendar-day"></i> <strong>Start Date:</strong> @task.StartDate?.ToString("yyyy-MM-dd")<br>
+										<i class="fas fa-calendar-check"></i> <strong>End Date:</strong> @task.EndDate?.ToString("yyyy-MM-dd")<br>
+										<i class="fas fa-info-circle"></i> <strong>Status:</strong> @task.TasksStatusEnum
+									</p>
+									<form method="post" asp-action="UpdateTaskStatus" asp-controller="EmployeeAttend">
+										<input type="hidden" name="taskId" value="@task.Id" />
+										<select name="status" class="form-control mb-2">
+											<option value="To Do" selected="@(task.TasksStatusEnum == "To Do")">To Do</option>
+											<option value="Doing" selected="@(task.TasksStatusEnum == "Doing")">Doing</option>
+											<option value="Done" selected="@(task.TasksStatusEnum == "Done")">Done</option>
+										</select>
+										<button type="submit" class="btn btn-success btn-sm w-100 btn-update">
+											<i class="fas fa-sync-alt"></i> Update
+										</button>
+									</form>
+								</div>
+							</div>
+						}
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<a href="@Url.Action("Index", "EmployeeAttend")" class="btn btn-secondary">
+			<i class="fas fa-arrow-left"></i> Back to Dashboard
+		</a>
+	</div>
+
+</div>

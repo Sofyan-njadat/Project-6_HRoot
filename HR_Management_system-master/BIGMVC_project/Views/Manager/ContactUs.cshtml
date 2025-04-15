@@ -1,0 +1,266 @@
+﻿@{
+    Layout = null;
+}
+@model Feedback
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>SolveX HR</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/css/booticon.css" rel="stylesheet">
+    <link href="~/css/aos.css" rel="stylesheet">
+    <link href="~/css/swiper.css" rel="stylesheet">
+    <link href="~/css/glig.css" rel="stylesheet">
+
+    <!-- Main CSS File -->
+    <link href="~/css/main.css" rel="stylesheet">
+    <style>
+        #ss {
+            color: var(--contrast-color);
+            background: var(--accent-color);
+            border: 0;
+            padding: 10px 30px;
+            transition: 0.4s;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body class="index-page">
+
+    <header id="header" class="header d-flex align-items-center fixed-top">
+        <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+            <a href="index.html" class="logo d-flex align-items-center me-auto me-lg-0">
+                <!-- Uncomment the line below if you also wish to use an image logo -->
+                <!-- <img src="assets/img/logo.png" alt=""> -->
+                <h1 class="sitename"><img src="~/image/HRoot_Logo-removebg-preview.png" style="max-height:46px !important" alt="Alternate Text" /></h1>
+                <span>.</span>
+            </a>
+
+            <nav id="navmenu" class="navmenu">
+                <ul>
+                    <li><a href="#hero" class="active">Home<br></a></li>
+                    <li><a asp-controller="Manager" asp-action="About_us">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            </nav>
+
+            <a asp-controller="Login" asp-action="Index" id="ss" class="cta-btn">Login</a>
+
+        </div>
+    </header>
+
+    <main class="main">
+
+        <!-- Hero Section -->
+        <section id="hero" class="hero section dark-background">
+
+            <img src="https://plus.unsplash.com/premium_photo-1661772661721-b16346fe5b0f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YnVzaW5lc3N8ZW58MHx8MHx8fDA%3D" alt="" data-aos="fade-in">
+
+            <div class="container">
+
+                <div class="row justify-content-center text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="col-l-6 col-l-8">
+                        <h2>"Get in Touch with Us"<span>.</span></h2>
+                        <p>
+                            Have a question or need assistance?<br />
+                            We're here to help!<br />
+                            Reach out to us, and our team will get back to you as soon as possible
+                        </p>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </section><!-- /Hero Section -->
+        <!-- Contact Section -->
+        <section id="contact" class="contact section">
+
+            <!-- Section Title -->
+            <div class="container section-title" data-aos="fade-up">
+                <h2>Contact</h2>
+                <p>Contact Us</p>
+            </div><!-- End Section Title -->
+
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+
+
+                <div class="row gy-4">
+
+                    <div class="col-lg-4">
+                        <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+                            <i class="bi bi-geo-alt flex-shrink-0"></i>
+                            <div>
+                                <h3>Address</h3>
+                                <p>HR3X+2VM, Al-Sheikh Khalil St., Irbid</p>
+                            </div>
+                        </div><!-- End Info Item -->
+
+                        <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+                            <i class="bi bi-telephone flex-shrink-0"></i>
+                            <div>
+                                <h3>Call Us</h3>
+                                <p>0777777777777</p>
+                            </div>
+                        </div><!-- End Info Item -->
+
+                        <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="500">
+                            <i class="bi bi-envelope flex-shrink-0"></i>
+                            <div>
+                                <h3>Email Us</h3>
+                                <p>Team@gemail.com</p>
+                            </div>
+                        </div><!-- End Info Item -->
+
+                    </div>
+
+
+                    <div class="col-lg-8">
+                        <form asp-action="contact" asp-controller="Manager" method="post" class="php-email-form">
+                            <div class="row gy-4">
+
+                                <div class="col-md-6">
+                                    <input type="text" asp-for="Name" class="form-control" placeholder="Your_Name" required="">
+                                </div>
+
+                                <div class="col-md-6 ">
+                                    <input type="email" class="form-control" asp-for="Email" placeholder="Your_Email" required="">
+                                </div>
+
+                                <div class="col-md-12">
+                                    <textarea class="form-control" asp-for="Message" rows="6" placeholder="Message" required=""></textarea>
+                                </div>
+
+                                <div class="col-md-12 text-center">
+
+                                    <div class="error-message"></div>
+                                    <div class="sent-message">Your message has been sent. Thank you!</div>
+
+                                    <button type="submit">Send Message</button>
+                                </div>
+
+                            </div>
+                        </form>
+                    </div><!-- End Contact Form -->
+                    <div class="mb-4" data-aos="fade-up" data-aos-delay="200">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3363.009729811047!2d35.847093874805246!3d32.55258557375828!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151c7715f2c2e7ab%3A0x51755840c8ddbefd!2sOrange%20Digital%20Village%20Irbid!5e0!3m2!1sen!2sjo!4v1740782086275!5m2!1sen!2sjo" style="border:0; width: 100%; height: 270px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div><!-- End Google Maps -->
+
+                </div>
+
+            </div>
+
+        </section><!-- /Contact Section -->
+
+    </main>
+
+    <footer id="footer" class="footer dark-background">
+
+        <div class="footer-top">
+            <div class="container">
+                <div class="row gy-4">
+                    <div class="col-lg-4 col-md-6 footer-about">
+                        <a href="index.html" class="logo d-flex align-items-center">
+                            <h1 class="sitename"><img src="~/image/HRoot_Logo-removebg-preview.png" style="max-height:46px !important" alt="Alternate Text" /></h1>
+                        </a>
+                        <div class="footer-contact pt-3">
+                            <p>Orange Coding Achademy</p>
+                            <p>Irbid </p>
+                            <p class="mt-3"><strong>Phone:</strong> <span>+962 7777 7777 77</span></p>
+                            <p><strong>Email:</strong> <span>Hroot@gmail.com</span></p>
+                        </div>
+                        <div class="social-links d-flex mt-4">
+                            <a href=""><i class="bi bi-twitter-x"></i></a>
+                            <a href=""><i class="bi bi-facebook"></i></a>
+                            <a href=""><i class="bi bi-instagram"></i></a>
+                            <a href=""><i class="bi bi-linkedin"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2 col-md-3 footer-links">
+                        <h4>Useful Links</h4>
+                        <ul>
+                            <li><i class="bi bi-chevron-right"></i> <a href="#"> Home</a></li>
+                            <li><i class="bi bi-chevron-right"></i> <a href="#"> About us</a></li>
+                            <li><i class="bi bi-chevron-right"></i> <a href="#"> Services</a></li>
+                            <li><i class="bi bi-chevron-right"></i> <a href="#"> Terms of service</a></li>
+                            <li><i class="bi bi-chevron-right"></i> <a href="#"> Privacy policy</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-2 col-md-3 footer-links">
+                        <h4>Our Services</h4>
+                        <ul>
+                            <li><i class="bi bi-chevron-right"></i> <a href="#"> Web Design</a></li>
+                            <li><i class="bi bi-chevron-right"></i> <a href="#"> Web Development</a></li>
+                            <li><i class="bi bi-chevron-right"></i> <a href="#"> Product Management</a></li>
+                            <li><i class="bi bi-chevron-right"></i> <a href="#"> Marketing</a></li>
+                            <li><i class="bi bi-chevron-right"></i> <a href="#"> Graphic Design</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-4 col-md-12 footer-newsletter">
+                        <h4>Our Newsletter</h4>
+                        <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
+                        <form action="forms/newsletter.php" method="post" class="php-email-form">
+                            <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
+                            <div class="loading">Loading</div>
+                            <div class="error-message"></div>
+                            <div class="sent-message">Your subscription request has been sent. Thank you!</div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <div class="container text-center">
+                <p>© <span>Copyright</span> <strong class="px-1 sitename">Hroot</strong> <span>All Rights Reserved</span></p>
+
+            </div>
+        </div>
+
+    </footer>
+
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    @* <script src="~/js/validation.js"></script> *@
+    <script src="~/js/aos.js"></script>
+    <script src="~/js/bundle.js"></script>
+    <script src="~/js/glig.js"></script>
+    <script src="~/js/image.js"></script>
+    <script src="~/js/iso.js"></script>
+    <script src="~/js/jssss.js"></script>
+
+    <!-- Main JS File -->
+    <script src="~/js/main.js"></script>
+
+</body>
+
+</html>

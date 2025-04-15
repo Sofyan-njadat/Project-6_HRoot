@@ -1,0 +1,47 @@
+﻿@model BIGMVC_project.Models.Evaluation
+
+
+@{
+    ViewData["Title"] = "View";
+    Layout = "~/Views/Shared/_LayoutGen.cshtml";
+}
+<div class="wrapper">
+
+    <div class="main-panel">
+
+        <h1 style=" text-align:center; margin: 50px auto; font-weight: bold; text-transform: capitalize;">Evaluation</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.EvaluationsStatusEnum)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Comments)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.DateEvaluated)
+                    </th>
+
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        @Model.EvaluationsStatusEnum
+                    </td>
+                    <td>
+                        @Model.Comments
+                    </td>
+                    <td>
+                        @Model.DateEvaluated
+                    </td>
+
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+</div>

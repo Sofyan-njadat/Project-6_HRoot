@@ -1,0 +1,33 @@
+﻿@model IEnumerable<BIGMVC_project.Models.Evaluation>
+
+@{
+    ViewData["Title"] = "Evaluations";
+}
+
+<h1>Evaluations</h1>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Employee Name</th>
+            <th>Manager Name</th>
+            <th>Status</th>
+            <th>Comments</th>
+            <th>Date Evaluated</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var evaluation in Model)
+        {
+            <tr>
+                <td>@evaluation.Employee.Name</td>  <!-- اسم الموظف -->
+                <td>@evaluation.Manager.Name</td>   <!-- اسم المدير -->
+                <td>@evaluation.EvaluationsStatusEnum</td>  <!-- حالة التقييم -->
+                <td>@evaluation.Comments</td>  <!-- التعليقات -->
+                <td>@evaluation.DateEvaluated?.ToString("yyyy-MM-dd")</td>  <!-- تاريخ التقييم -->
+            </tr>
+        }
+    </tbody>
+</table>
+
+

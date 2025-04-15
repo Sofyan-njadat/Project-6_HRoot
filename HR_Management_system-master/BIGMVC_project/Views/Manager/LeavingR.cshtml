@@ -1,0 +1,83 @@
+﻿@model List<LeaveRequest>
+@{
+	Layout = "~/Views/Shared/_ManagersLayout1.cshtml";
+}
+<head>
+    @section style {
+        @* <link rel="stylesheet" href="~/css/style.css"> *@
+    }
+</head>
+<div class="col-12 col-lg-10 col-xl-10 content vh-100">
+    <!-- start breadcrumb -->
+    <!-- end breadcrumb -->
+    <div class="row">
+        <div class="col-12">
+            <div class="card ">
+                <div class="card-body">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h4 class="mb-0">
+                            <i data-feather="list" class="text-primary mr-2"></i>
+                            </i>Lists of Request
+                        </h4>
+                    </div>
+                    <hr>
+                    <table id="item_lists" class="table table-striped" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>EmployeeId</th>
+                                <th>StartDate</th>
+                                <th>EndDate</th>
+                                <th>Reason</th>
+                                @* <th>LeaveRequestsStatus</th> *@
+                                <th>RequestName</th>
+                                <th>LeaveType</th>
+                                <th>Operation</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>@item.EmployeeId</td>
+                                    <td>@item.StartDate</td>
+                                    <td>@item.EndDate</td>
+                                    <td>@item.Reason</td>
+                                    @* <td>@item.LeaveRequestsStatusEnum</td> *@
+                                    <td>@item.RequestName</td>
+                                    <td>@item.LeaveType</td>
+                                    <td>
+                                        @if (item.LeaveRequestsStatusEnum == "Pending")
+                                        {
+                                            <form method="post" asp-controller="Manager" asp-action="LeavingR">
+                                                <input type="hidden" name="id" value="@item.Id" />
+                                                <button type="submit" name="status" value="Approved" class="btn btn-success">Accept</button>
+                                                <button type="submit" name="status" value="Rejected" class="btn btn-danger">Reject</button>
+                                            </form>
+                                        }
+                                        else if (item.LeaveRequestsStatusEnum == "Approved")
+                                        {
+                                            <h5 style="color:green">Accepted</h5>
+                                        }
+                                        else
+                                        {
+                                            <h5 style="color:red">Rejected</h5>
+                                        }
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+
+
+                        
+                    </table>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end content area -->
+</div>
+@section scripts {
+    <script src="~/js/datatablemain.js"></script>
+	<script src="~/js/datatablebootstrap.js"></script>
+}

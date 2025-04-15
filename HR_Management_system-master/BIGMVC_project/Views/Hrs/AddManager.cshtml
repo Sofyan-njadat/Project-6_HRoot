@@ -1,0 +1,79 @@
+﻿@model Manager
+<head>
+    <style>
+        body {
+            background-color: white;
+            font-family: Arial, sans-serif;
+            color: black;
+        }
+
+        .form-control {
+            background-color: white;
+            color: black;
+            border: 1px solid #5a6074;
+            padding: 10px;
+            border-radius: 4px;
+            width: 100%;
+        }
+
+            .form-control:focus {
+                background-color: white;
+                color: black;
+                border-color: #4b5362;
+                outline: none;
+            }
+
+        select.form-control {
+            background-color: #6C7293;
+            color: white;
+            border: 1px solid #5a6074;
+            padding: 10px;
+            border-radius: 4px;
+            width: 100%;
+        }
+
+        input::placeholder {
+            color: #b0b0b0;
+        }
+    </style>
+</head>
+
+<h2 style="color:black;">Add Manager</h2>
+
+<form method="post" enctype="multipart/form-data" asp-action="AddManager">
+    <div class="form-group">
+        <label for="Name">Name</label>
+        <input type="text" class="form-control" id="Name" name="Name" required placeholder="Enter Name" />
+    </div>
+    <div class="form-group">
+        <label for="Email">Email</label>
+        <input type="email" class="form-control" id="Email" name="Email" required placeholder="Enter Email" />
+    </div>
+    <div class="form-group">
+        <label for="PasswordHash">Password</label>
+        <input type="password" class="form-control" id="PasswordHash" name="PasswordHash" required placeholder="Enter Password" />
+    </div>
+    <div class="form-group">
+        <label for="DepartmentID">Department</label>
+        <select class="form-control" id="DepartmentID" name="DepartmentID" required>
+            <option value="">Select a Department</option>
+            @foreach (var department in ViewBag.Departments as List<Department>)
+            {
+                <option value="@department.Id">@department.Name</option>
+            }
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="ProfilePicture">Profile Picture</label>
+        <input type="file" class="form-control" id="ProfilePicture" name="ProfilePicture" />
+    </div>
+    <hr />
+    <button type="submit" class="btn btn-primary">Add Manager</button>
+
+</form>
+
+@if (Model != null && !string.IsNullOrEmpty(Model.Image))
+{
+    <h3>Profile Picture:</h3>
+    <img src="/images/managers/@Model.Image" alt="Manager Profile Picture" width="150" />
+}

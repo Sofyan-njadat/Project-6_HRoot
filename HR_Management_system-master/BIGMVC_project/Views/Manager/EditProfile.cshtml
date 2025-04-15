@@ -1,0 +1,32 @@
+﻿@model Manager
+@{
+    Layout = "~/Views/Shared/_ManagersLayout1.cshtml";
+
+    ViewData["Title"] = "EditProfile";
+}
+
+<link href="/css/Profile.css" rel="stylesheet" />
+
+<h1>Edit Profile</h1>
+
+<form method="post" asp-action="HandleEditProfile" enctype="multipart/form-data">
+
+    <input asp-for="Id" type="hidden" />
+
+    <div class="form-group">
+        <label for="Name">Name:</label>
+        <input asp-for="Name" class="form-control" value="@Model.Name" />
+    </div>
+
+    <div class="form-group">
+        <label for="Email">Email:</label>
+        <input asp-for="Email" class="form-control" disabled value="@Model.Email" />
+    </div>
+
+    <div class="form-group">
+        <label for="ProfileImage">Profile Image:</label>
+        <input asp-for="ProfileImageFile" type="file" class="form-control" name="ImageFile" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save Changes</button>
+</form>
